@@ -15,7 +15,8 @@ switch ($lang){
 
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+		<meta charset="utf-8">
+		<meta name="theme-color" content="#51ae4a">
     <style>
     .centered {
         position: fixed;
