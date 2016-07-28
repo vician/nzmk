@@ -15,7 +15,7 @@ switch ($lang){
 // Pastel colors by http://colors.findthedata.com/saved_search/Pastel-Colors
 // Except: #C23B22
 $backgrounds = array( "#F49AC2", "#CB99C9", "#FFD1DC", "#DEA5A4", "#AEC6CF", "#77DD77", "#CFCFC4", "#B39EB5", "#FFB347", "#B19CD9", "#FF6961", "#03C03C", "#FDFD96", "#836953", "#779ECB", "#966FD6" );
-$background = array_rand($backgrounds);
+$background = time() % count($backgrounds);
 
 ?><!doctype html>
 
