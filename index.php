@@ -12,8 +12,9 @@ switch ($lang){
         break;
 }
 
-# Pastel colors by http://colors.findthedata.com/saved_search/Pastel-Colors
-$backgrounds = array( "#F49AC2", "#CB99C9", "#C23B22", "#FFD1DC", "#DEA5A4", "#AEC6CF", "#77DD77", "#CFCFC4", "#B39EB5", "#FFB347", "#B19CD9", "#FF6961", "#03C03C", "#FDFD96", "#836953", "#779ECB", "#966FD6" );
+// Pastel colors by http://colors.findthedata.com/saved_search/Pastel-Colors
+// Except: #C23B22
+$backgrounds = array( "#F49AC2", "#CB99C9", "#FFD1DC", "#DEA5A4", "#AEC6CF", "#77DD77", "#CFCFC4", "#B39EB5", "#FFB347", "#B19CD9", "#FF6961", "#03C03C", "#FDFD96", "#836953", "#779ECB", "#966FD6" );
 $background = array_rand($backgrounds);
 
 ?><!doctype html>
@@ -89,24 +90,12 @@ if(!isset($_COOKIE["count"])) {
 			echo $count;
 			switch($last) {
 				case "1":
-					if($_COOKIE["count"] == "11") {
-						echo "th";
-						break;
-					}
 					echo "st";
 					break;
 				case "2":
-					if($_COOKIE["count"] == "12") {
-						echo "th";
-						break;
-					}
 					echo "nd";
 					break;
 				case "3":
-					if($_COOKIE["count"] == "13") {
-						echo "th";
-						break;
-					}
 					echo "rd";
 					break;
 				default:
