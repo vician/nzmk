@@ -12,12 +12,57 @@ switch ($lang){
         break;
 }
 
+$expire = 60*60*24*365;
+if(!isset($_COOKIE["count"])) {
+	setcookie("count",1,time()+$expire);
+	$status = "First";
+	$count = 1;
+} else {
+	$count = $_COOKIE["count"];
+	$count++;
+	setcookie("count",$count,time()+$expire);
+	$last = substr($count,-1);
+	switch($count) {
+		case "1":
+			$status = "First";
+			break;
+		case "2":
+			$status = "Second";
+			break;
+		case "3":
+			$status = "Third";
+			break;
+		case "11":
+		case "12":
+		case "13":
+			$status = $count."th";
+			break;
+		default:
+			$status .= $count;
+			switch($last) {
+				case "1":
+					$status .= "st";
+					break;
+				case "2":
+					$status .= "nd";
+					break;
+				case "3":
+					$status .= "rd";
+					break;
+				default:
+					$status .= "th";
+					break;
+			}
+		break;
+	}
+}
+
 // Pastel colors by http://colors.findthedata.com/saved_search/Pastel-Colors
 // Except: #C23B22
 $backgrounds = array( "#F49AC2", "#CB99C9", "#FFD1DC", "#DEA5A4", "#AEC6CF", "#77DD77", "#CFCFC4", "#B39EB5", "#FFB347", "#B19CD9", "#FF6961", "#03C03C", "#FDFD96", "#836953", "#779ECB", "#966FD6" );
-$background = time() % count($backgrounds);
-
-?><!doctype html>
+$background = $count % count($backgrounds);
+?>
+<!doctype html>
 
 <html lang="en">
 <head>
@@ -60,54 +105,7 @@ $background = time() % count($backgrounds);
 
 <body>
 		<h1 class="centered" style="font-size: 500%;"><?php echo "$message"; ?></h1>
-		<div class="status">
-<?php
-$expire = 60*60*24*365;
-if(!isset($_COOKIE["count"])) {
-	setcookie("count",1,time()+$expire);
-	echo "First hit!";
-} else {
-	$count = $_COOKIE["count"];
-	$count++;
-	setcookie("count",$count,time()+$expire);
-	$last = substr($count,-1);
-	switch($count) {
-		case "1":
-			echo "First";
-			break;
-		case "2":
-			echo "Second";
-			break;
-		case "3":
-			echo "Third";
-			break;
-		case "11":
-		case "12":
-		case "13":
-			echo $count."th";
-			break;
-		default:
-			echo $count;
-			switch($last) {
-				case "1":
-					echo "st";
-					break;
-				case "2":
-					echo "nd";
-					break;
-				case "3":
-					echo "rd";
-					break;
-				default:
-					echo "th";
-					break;
-			}
-		break;
-	}
-	echo " hit!";
-}
-?>
-		</div>
+		<div class="status"><?php echo $status; ?> hit!</div>
 		<div class="bottom"><a href="https://github.com/vician/nzmk.cz">Fork me on Github.</a> Created by <a href="https://www.vician.cz">Vician</a> and <a href="https://lat.sk">Lat</a>.</div>
 </body>
 </html>
