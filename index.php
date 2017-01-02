@@ -61,6 +61,16 @@ if(!isset($_COOKIE["count"])) {
 // Except: #C23B22
 $backgrounds = array( "#F49AC2", "#CB99C9", "#FFD1DC", "#DEA5A4", "#AEC6CF", "#77DD77", "#CFCFC4", "#B39EB5", "#FFB347", "#B19CD9", "#FF6961", "#03C03C", "#FDFD96", "#836953", "#779ECB", "#966FD6" );
 $background = $count % count($backgrounds);
+
+// hostname
+$hostname_number = preg_replace( '/[^0-9,.]/', '', gethostname() );
+if($hostname_number == "") {
+	$hostname_number=1;
+	$hostname_slave=2;
+}else{
+	$hostname_slave =1;
+}
+$hostname="<a href=\"https://".$hostname_slave.".nzmk.cz\">".$hostname_number."</a>";
 ?>
 <!doctype html>
 
@@ -100,11 +110,28 @@ $background = $count % count($backgrounds);
 				color: black;
 				font-weight: bold;
 		}
+
+		.hostname {
+			position: fixed;
+			top: 1%;
+			right: 1%;
+			text-align: right;
+			color: DimGray;
+		}
+		.hostname a {
+				color: DimGray;
+				text-decoration: none;
+		}
+		.hostname a:hover {
+				color: DimGray;
+				text-decoration: underline;
+		}
     </style>
 </head>
 
 <body>
 		<h1 class="centered" style="font-size: 500%;"><?php echo "$message"; ?></h1>
+		<div class="hostname"><?php echo $hostname; ?></div>
 		<div class="status"><?php echo $status; ?> hit!</div>
 		<div class="bottom"><a href="https://github.com/vician/nzmk.cz">Fork me on Github.</a> Created by <a href="https://www.vician.cz">Vician</a> and <a href="https://lat.sk">Lat</a>.</div>
 </body>
