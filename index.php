@@ -123,5 +123,15 @@ $background = $count % count($backgrounds);
 		<h1 class="centered" style="font-size: 500%;"><?php echo "$message"; ?></h1>
 		<div class="status"><?php echo $status; ?> hit!</div>
 		<div class="bottom"><a href="https://github.com/vician/nzmk.cz">Fork me on Github.</a> Created by <a href="https://www.vician.cz">Vician</a> and <a href="https://lat.sk">Lat</a>.</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73656343-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
