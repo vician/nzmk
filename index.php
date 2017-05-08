@@ -191,7 +191,7 @@ foreach ($translates as $translate_language => $strings) {
     </div>
     <!-- /.container -->
 
-<?php if ($lang = "review") language_review(); ?>
+<?php if ($lang == "review") language_review(); ?>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
