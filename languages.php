@@ -30,7 +30,7 @@ $translates = array(
 	'cs' => $cs,
 );
 
-function _($string) {
+function tr($string) {
 	global $lang, $translates;
 	if($lang == "review") {
 		global $language_strings;
@@ -50,7 +50,7 @@ function language_review() {
 
 	echo "<div align='center' id='languages'>";
 	echo "<h1>";
-	_("Strings for translation");
+	tr("Strings for translation");
 	echo "</h1>";
 	echo "<table border=\"1\">";
 	echo "<tr>";
@@ -70,7 +70,7 @@ function language_review() {
 	}
 	echo "</table>";
 	echo "<h1>";
-	_("Not used strings");
+	tr("Not used strings");
 	echo "</h1>";
 	echo "<table border=\"1\">";
 	foreach ($translates as $lang => $strings) {

@@ -61,7 +61,7 @@ if(!isset($_COOKIE["count"])) {
 	<meta name="author" content="">
 	<meta name="theme-color" content="rgb(34, 34, 34);">
 
-	<title><?php _("I didn't lock my computer again!"); ?> | nzmk.cz</title>
+	<title><?php tr("I didn't lock my computer again!"); ?> | nzmk.cz</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -86,7 +86,7 @@ if(!isset($_COOKIE["count"])) {
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				<span class="sr-only"><?php _('Toggle navigation'); ?></span>
+				<span class="sr-only"><?php tr('Toggle navigation'); ?></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -97,13 +97,13 @@ if(!isset($_COOKIE["count"])) {
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-						<a href="#why"><?php _('Why'); ?></a>
+						<a href="#why"><?php tr('Why'); ?></a>
                     </li>
                     <li>
-						<a href="#how"><?php _('How to use'); ?></a>
+						<a href="#how"><?php tr('How to use'); ?></a>
                     </li>
                     <li>
-						<a href="#about"><?php _('About'); ?></a>
+						<a href="#about"><?php tr('About'); ?></a>
 					</li>
 <?php
 foreach ($translates as $translate_language => $strings) {
@@ -123,8 +123,8 @@ foreach ($translates as $translate_language => $strings) {
     <header class="header-image">
         <div class="headline">
             <div class="container">
-				<h1><?php _("I didn't lock my computer again!"); ?></h1>
-				<h2><?php _($count);_($status); ?> <?php _('hit'); ?>!</h2>
+				<h1><?php tr("I didn't lock my computer again!"); ?></h1>
+				<h2><?php tr($count);tr($status); ?> <?php tr('hit'); ?>!</h2>
             </div>
         </div>
     </header>
@@ -137,10 +137,10 @@ foreach ($translates as $translate_language => $strings) {
         <!-- First Featurette -->
         <div class="featurette" id="why">
             <img class="featurette-image img-circle img-responsive pull-right" src="./img/keys.jpg">
-			<h2 class="featurette-heading"><?php _('Why'); ?>
-				<span class="text-muted"><?php _('should I lock my computer?'); ?></span>
+			<h2 class="featurette-heading"><?php tr('Why'); ?>
+				<span class="text-muted"><?php tr('should I lock my computer?'); ?></span>
 			</h2>
-			<p class="lead"><?php _(''); ?></p>
+			<p class="lead"><?php tr(''); ?></p>
         </div>
 
         <hr class="featurette-divider">
@@ -148,10 +148,10 @@ foreach ($translates as $translate_language => $strings) {
         <!-- Second Featurette -->
         <div class="featurette" id="how">
             <img class="featurette-image img-circle img-responsive pull-left" src="./img/baby.png">
-			<h2 class="featurette-heading"><?php _('How to use'); ?>
-				<span class="text-muted"><?php _('this page?'); ?></span>
+			<h2 class="featurette-heading"><?php tr('How to use'); ?>
+				<span class="text-muted"><?php tr('this page?'); ?></span>
 				</h2>
-			<p class="lead"><?php _(''); ?></p>
+			<p class="lead"><?php tr(''); ?></p>
         </div>
 
         <hr class="featurette-divider">
@@ -159,21 +159,21 @@ foreach ($translates as $translate_language => $strings) {
         <!-- Third Featurette -->
         <div class="featurette" id="about">
             <img class="featurette-image img-circle img-responsive pull-right" src="./img/mit.png">
-			<h2 class="featurette-heading"><?php _('About'); ?>
-				<span class="text-muted"><?php _('and contact'); ?></span>
+			<h2 class="featurette-heading"><?php tr('About'); ?>
+				<span class="text-muted"><?php tr('and contact'); ?></span>
             </h2>
-			<p class="lead"><?php _("We would like to teach people to lock their computers while they are away and improve security."); ?></p>
+			<p class="lead"><?php tr("We would like to teach people to lock their computers while they are away and improve security."); ?></p>
 			<ul>
-				<li><?php _("Authors"); ?>: <a href="https://lat.sk">Radek Lát</a> <?php _("and"); ?> <a href="https://www.vician.cz">Martin Vicián</a>
-				<li><?php _("Code released under the"); ?> <a href="https://github.com/vician/nzmk.cz/blob/master/LICENSE">MIT</a> <?php _("license"); ?></li>
-				<li><?php _("Source code"); ?>: <a href="https://github.com/vician/nzmk.cz/">https://github.com/vician/nzmk.cz</a></li>
-				<li><?php _("Theme"); ?>: <a href="https://startbootstrap.com/template-overviews/bare/">https://startbootstrap.com/template-overviews/bare/</a></li>
+				<li><?php tr("Authors"); ?>: <a href="https://lat.sk">Radek Lát</a> <?php tr("and"); ?> <a href="https://www.vician.cz">Martin Vicián</a>
+				<li><?php tr("Code released under the"); ?> <a href="https://github.com/vician/nzmk.cz/blob/master/LICENSE">MIT</a> <?php tr("license"); ?></li>
+				<li><?php tr("Source code"); ?>: <a href="https://github.com/vician/nzmk.cz/">https://github.com/vician/nzmk.cz</a></li>
+				<li><?php tr("Theme"); ?>: <a href="https://startbootstrap.com/template-overviews/bare/">https://startbootstrap.com/template-overviews/bare/</a></li>
 				<li>Contact us: <a href="mailto:&#x69;&#x6E;&#x66;&#x6F;&#x40;&#x76;&#x69;&#x63;&#x69;&#x61;&#x6E;&#x2E;&#x63;&#x7A;">&#x69;&#x6E;&#x66;&#x6F;&#x40;&#x76;&#x69;&#x63;&#x69;&#x61;&#x6E;&#x2E;&#x63;&#x7A;</a></li>
 			</ul>
-			<p class="lead"><?php _("Contribute"); ?>:</p>
+			<p class="lead"><?php tr("Contribute"); ?>:</p>
 			<ul>
-				<li><?php _("Use and show your friends and colleagues."); ?></li>
-				<li><a href="?lang=review#languages"><?php _("Translate this page to your language."); ?></a></li>
+				<li><?php tr("Use and show your friends and colleagues."); ?></li>
+				<li><a href="?lang=review#languages"><?php tr("Translate this page to your language."); ?></a></li>
 			</ul>
         </div>
 
@@ -183,7 +183,7 @@ foreach ($translates as $translate_language => $strings) {
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-					<p>Copyright &copy; <?php echo date("Y"); ?> <?php _("Code released under the"); ?> <a href="https://github.com/vician/nzmk.cz/blob/master/LICENSE">MIT</a> <?php _("license"); ?>.</p>
+					<p>Copyright &copy; <?php echo date("Y"); ?> <?php tr("Code released under the"); ?> <a href="https://github.com/vician/nzmk.cz/blob/master/LICENSE">MIT</a> <?php tr("license"); ?>.</p>
                 </div>
             </div>
         </footer>
