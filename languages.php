@@ -9,6 +9,7 @@ if(isset($_GET['lang'])) {
 }
 
 $language_strings = array("");
+$en = array();
 $cs = array(
 	"Why" => "Proč",
 	"How to use" => "Jak používat",
