@@ -1,5 +1,7 @@
 <?php
-$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+} else $lang = 'en';
 include('./languages.php');
 
 $expire = 60*60*24*365;
