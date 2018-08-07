@@ -2,13 +2,16 @@ image: ubuntu:latest
 
 before_script:
     - apt-get update -y
-    - apt-get install rsync openssh-client -y
+    - apt-get install rsync openssh-client git -y
     - mkdir -p $HOME/.ssh
     - chmod 700 $HOME/.ssh
+    - rm -f $HOME/.ssh/known_hosts
     - echo "$SSH_HOST ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDDoLhgavd5zWF8C+/BKlM15LNtpaaUkL03b44KYKxJ0DVf54zd6PO4pZxmZYorkNtsVHkOsJbXm2rmVrvdGBMU=" > $HOME/.ssh/known_hosts
+    - ssh-keyscan -t rsa,dsa,ecdsa github.com >> $HOME/.ssh/known_hosts
     - chmod 644 $HOME/.ssh/known_hosts
     - eval $(ssh-agent -s)
     - echo "$SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - ssh-add -l
 
 
 deploy:
@@ -16,3 +19,19 @@ deploy:
         - rsync -e "ssh" -avz --delete --exclude="\.*" * $SSH_USER@$SSH_HOST:$SSH_ROOT/
     only:
         - master
+
+mirror-master:
+    script:
+        - git remote add upstream git@github.com:vician/nzmk || true
+        - git fetch upstream
+        - git push --force --progress upstream HEAD:master
+    only:
+        - master
+
+mirror-tags:
+    script:
+        - git remote add upstream git@github.com:vician/nzmk || true
+        - git fetch upstream
+        - git push --force --progress --tags upstream HEAD:master
+    only:
+        - tags
