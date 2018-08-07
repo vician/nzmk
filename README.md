@@ -1,4 +1,4 @@
-# nzmk.cz
+# nzmk.vician.cz
 
 Theme from: https://github.com/BlackrockDigital/startbootstrap-one-page-wonder
 
