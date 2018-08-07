@@ -167,8 +167,8 @@ foreach ($translates as $translate_language => $strings) {
 			<p class="lead"><?php tr("We would like to teach people to lock their computers while they are away and improve security."); ?></p>
 			<ul>
 				<li><?php tr("Authors"); ?>: <a href="https://lat.sk">Radek Lát</a> <?php tr("and"); ?> <a href="https://www.vician.cz">Martin Vicián</a>
-				<li><?php tr("Code released under the"); ?> <a href="https://github.com/vician/nzmk.cz/blob/master/LICENSE">MIT</a> <?php tr("license"); ?></li>
-				<li><?php tr("Source code"); ?>: <a href="https://github.com/vician/nzmk.cz/">https://github.com/vician/nzmk.cz</a></li>
+				<li><?php tr("Code released under the"); ?> <a href="https://gitlab.com/vician/nzmk/blob/master/LICENSE">MIT</a> <?php tr("license"); ?></li>
+				<li><?php tr("Source code"); ?>: <a href="https://gitlab.com/vician/nzmk/">https://gitlab.com/vician/nzmk</a></li>
 				<li><?php tr("Theme"); ?>: <a href="https://startbootstrap.com/template-overviews/bare/">https://startbootstrap.com/template-overviews/bare/</a></li>
 				<li>Contact us: <a href="mailto:&#x69;&#x6E;&#x66;&#x6F;&#x40;&#x76;&#x69;&#x63;&#x69;&#x61;&#x6E;&#x2E;&#x63;&#x7A;">&#x69;&#x6E;&#x66;&#x6F;&#x40;&#x76;&#x69;&#x63;&#x69;&#x61;&#x6E;&#x2E;&#x63;&#x7A;</a></li>
 			</ul>
@@ -185,7 +185,7 @@ foreach ($translates as $translate_language => $strings) {
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-					<p>Copyright &copy; <?php echo date("Y"); ?> <?php tr("Code released under the"); ?> <a href="https://github.com/vician/nzmk.cz/blob/master/LICENSE">MIT</a> <?php tr("license"); ?>.</p>
+					<p>Copyright &copy; <?php echo date("Y"); ?> <?php tr("Code released under the"); ?> <a href="https://gitlab.com/vician/nzmk/blob/master/LICENSE">MIT</a> <?php tr("license"); ?>.</p>
                 </div>
             </div>
         </footer>
