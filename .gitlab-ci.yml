@@ -1,8 +1,8 @@
-image: python:alpine
+image: ubuntu:latest
 
 before_script:
-    - apk update
-    - apk add --update rsync openssh-client git
+    - apt update
+    - apt install rsync openssh-client git -y
     - mkdir -p $HOME/.ssh
     - chmod 700 $HOME/.ssh
     - rm -f $HOME/.ssh/known_hosts
@@ -11,6 +11,7 @@ before_script:
     - chmod 644 $HOME/.ssh/known_hosts
     - eval $(ssh-agent -s)
     - ssh-add -D
+    - if [ -z "$SSH_KEY" ]; then echo "Empty key"; fi
     - echo -en "$SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - ssh-add -l
 
