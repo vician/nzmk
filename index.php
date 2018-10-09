@@ -61,7 +61,7 @@ if(!isset($_COOKIE["count"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
 	<meta name="author" content="">
-	<meta name="theme-color" content="rgb(34, 34, 34);">
+	<meta name="theme-color" content="#222">
 
 	<title><?php tr("I didn't lock my computer again!"); ?> | nzmk.cz</title>
 
