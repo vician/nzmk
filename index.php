@@ -63,7 +63,7 @@ if(!isset($_COOKIE["count"])) {
 	<meta name="author" content="">
 	<meta name="theme-color" content="#222">
 
-	<title><?php tr("I didn't lock my computer again!"); ?> | nzmk.cz</title>
+	<title><?php tr("I didn't lock my computer again!"); ?> | nzmk.itburrow.cz</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -93,7 +93,7 @@ if(!isset($_COOKIE["count"])) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">nzmk.cz</a>
+                <a class="navbar-brand" href="#">nzmk.itburrow.cz</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
