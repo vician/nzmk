@@ -99,6 +99,22 @@ function language_review() {
 	}
 	echo "</table>";
 	echo "</div>";
+	echo "<textarea rows=\"".count($translates)\" cols=\"60\">";
+	foreach ($translates as $lang => $strings) {
+		if($lang != "en") {
+			echo "\$$lang = array(\n";
+		}
+		foreach ($language_strings as $string) {
+			if($string == "") continue;
+			echo "\"".$string,"\" => \"";
+			if(isset($strings[$string])) echo $strings[$string];
+			echo "\"";
+		}
+		if($lang != "en") {
+			echo ");";
+		}
+	}
+	echo "</textarea>";
 }
 
 ?>
