@@ -45,7 +45,7 @@ function language_review() {
 	foreach ($language_strings as $string) {
 		if($string == "") continue;
 		if(is_numeric($string)) continue;
-		if(in_array($string,array("st","nd","rd","th")) continue;
+		if(in_array($string,array("st","nd","rd","th"))) continue;
 		echo "</tr>";
 		echo "<td>".$string,"</td>";
 		foreach ($translates as $lang => $strings) {
@@ -77,14 +77,14 @@ function language_review() {
 	echo "<h1>";
 	tr("PHP export");
 	echo "</h1>";
-	echo "<textarea rows=\"".count($language_strings)."\" cols=\"60\">";
+	echo "<textarea rows=\"".count($language_strings)."\" cols=\"120\">";
 	foreach ($translates as $lang => $strings) {
 		if ($lang == "en") continue;
 		echo "\$$lang = array(\n";
 		foreach ($language_strings as $string) {
 			if($string == "") continue;
 			if(is_numeric($string)) continue;
-			if(in_array($string,array("st","nd","rd","th")) continue;
+			if(in_array($string,array("st","nd","rd","th"))) continue;
 			echo "\t\"".$string,"\" => \"";
 			if(isset($strings[$string])) echo $strings[$string];
 			echo "\",\n";
