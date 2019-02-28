@@ -8,6 +8,9 @@ if(isset($_GET['lang'])) {
 	} else $lang = 'en';
 }
 
+require_once("strings.php");
+
+/*
 $language_strings = array("");
 $en = array();
 $cs = array(
@@ -35,7 +38,7 @@ $cs = array(
 	"nd" => "",
 	"rd" => "",
 	"th" => "",
-);
+);*/
 
 $translates = array(
 	'en' => $en, // English is default
