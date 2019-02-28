@@ -18,8 +18,15 @@ $cs = array(
 	"I didn't lock my computer again!" => "Zase jsem si nezamkl(a) počítač!",
 	"hit" => "zásah",
 	"should I lock my computer?" => "bych si měl(a) zamykat počítač?",
+	"this page?" => "bych si měl(a) zamykat počítač?",
+	"We would like to teach people to lock their computers while they are away and improve security." => "Chceme rozšířit povědomí o nutnosti zamykat svá zařízení, když je nemáme pod dohledem.",
+	"Contribute" => "Jak se zapojit",
+	"Use and show your friends and colleagues." => "Používejte tento web a ukažte jej svým známym a kolegům.".
+	"Translate this page to your language." => "Pomozte nám přeložit tuto stránku do vašeho jazyka.",
 	"Code released under the" => "Zdrojový kód zvěřejněn pod",
 	"license" => "licencí",
+	"Strings for translation" => "Texty pro překlad",
+	"Toggle navigation" => "Zobrazit/skrýt menu",
 	// numbers
 	"First" => "První",
 	"Second" => "Druhý",

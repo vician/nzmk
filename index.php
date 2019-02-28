@@ -142,7 +142,7 @@ foreach ($translates as $translate_language => $strings) {
 			<h2 class="featurette-heading"><?php tr('Why'); ?>
 				<span class="text-muted"><?php tr('should I lock my computer?'); ?></span>
 			</h2>
-			<p class="lead"><?php tr(''); ?></p>
+			<p class="lead"><?php tr("Because you should secure data on laptop's disk and in memory. You also should protect your device from unauthorized installation of programs - e.g. keyloggers, program for botnets and mining virtual currencies. Don't forget that you are the product for a lot of companies nowadays."); ?></p>
         </div>
 
         <hr class="featurette-divider">
@@ -153,7 +153,7 @@ foreach ($translates as $translate_language => $strings) {
 			<h2 class="featurette-heading"><?php tr('How to use'); ?>
 				<span class="text-muted"><?php tr('this page?'); ?></span>
 				</h2>
-			<p class="lead"><?php tr(''); ?></p>
+			<p class="lead"><?php tr('When you see unlocked device of your colleague or friend open browser on it and open this webpage. The hints increase each visit of this webpage.'); ?></p>
         </div>
 
         <hr class="featurette-divider">
