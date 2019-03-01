@@ -2,7 +2,7 @@ image: ubuntu:latest
 
 before_script:
     - apt update
-    - apt install -y rsync openssh-client git php-cli
+    - DEBIAN_FRONTEND=noninteractive apt install -y openssh-client git
     - mkdir -p $HOME/.ssh
     - chmod 700 $HOME/.ssh
     - rm -f $HOME/.ssh/known_hosts
@@ -17,6 +17,7 @@ before_script:
 
 deploy:
     script:
+        - DEBIAN_FRONTEND=noninteractive apt install -y rsync php-cli
         - php index.php
         - rsync -e "ssh" -avz --delete --exclude="\.*" * $SSH_USER@$SSH_HOST:$SSH_ROOT/
     only:
