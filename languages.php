@@ -32,6 +32,7 @@ function tr($string) {
 
 function language_review() {
 	global $translates,$language_strings;
+	sort($language_strings);
 
 	echo "<div align='center' id='languages'>";
 	echo "<h1>";
