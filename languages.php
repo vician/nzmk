@@ -50,7 +50,9 @@ function language_review() {
 		echo "<td>".$string,"</td>";
 		foreach ($translates as $lang => $strings) {
 			if($lang != "en") {
-				echo "<td>".$strings[$string]."</td>";
+				echo "<td";
+				if ($strings[$string] == "") echo " style=\"background: orange;\"";
+				echo ">".$strings[$string]."</td>";
 			}
 		}
 		echo "</tr>";
