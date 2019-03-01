@@ -1,5 +1,6 @@
-# nzmk.vician.cz
+# nzmk.burrowit.cz
 
-Theme from: https://github.com/BlackrockDigital/startbootstrap-one-page-wonder
+## TODO
 
-Background from: https://static.pexels.com/photos/163009/computer-security-padlock-hacker-163009.jpeg
+- [ ] correct English texts
+- [ ] translate long texts to Czech
