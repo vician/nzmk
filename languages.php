@@ -19,7 +19,8 @@ function tr($string) {
 	global $lang, $translates;
 	if($lang == "review") {
 		global $language_strings;
-		array_push($language_strings,$string);
+		if(!isset($language_strings[$string]))
+			array_push($language_strings,$string);
 	}
 
 	if(isset($translates[$lang])) {
