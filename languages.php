@@ -44,7 +44,7 @@ function language_review() {
 	foreach ($translates as $lang => $strings) {
 		echo "<th>".$lang."</th>";
 	}
-	foreach ($language_strings as $string) {
+	foreach (array_unique($language_strings) as $string) {
 		if($string == "") continue;
 		if(is_numeric($string)) continue;
 		if(in_array($string,array("st","nd","rd","th"))) continue;
@@ -85,7 +85,7 @@ function language_review() {
 	foreach ($translates as $lang => $strings) {
 		if ($lang == "en") continue;
 		echo "\$$lang = array(\n";
-		foreach ($language_strings as $string) {
+		foreach (array_unique($language_strings) as $string) {
 			if($string == "") continue;
 			if(is_numeric($string)) continue;
 			if(in_array($string,array("st","nd","rd","th"))) continue;
